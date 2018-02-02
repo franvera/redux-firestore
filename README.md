@@ -215,6 +215,17 @@ store.firestore.setListeners([
 // props.store.firestore.get('cities/SF'),
 ```
 
+##### Deep Sub Collections
+
+```js
+{ collection: 'cities', doc: 'SF', subcollections: [
+  { collection: 'neighborhoods', doc: 'bayview' },
+  { collection: 'restaurants' },
+]},
+// or string equivalent
+// props.store.firestore.get('cities/SF/neighborhoods/bayview/restaurants'),
+```
+
 
 ##### Where
 
